@@ -22,8 +22,8 @@ class Train
     @number = number
     @speed  = speed
     @wagons =[]
-    @@trains[number] = self
     validate!
+    @@trains[number] = self
   end
 
   def self.trains

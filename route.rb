@@ -28,6 +28,7 @@ class Route
 
   def validate!
     raise ArgumentError, "wrong route name format" if @name !~ ROUTE_FORMAT
+    raise ArgumentError, "wrong start or finish format" if stations.each {|s| s.class != Station}
     true
   end
 
